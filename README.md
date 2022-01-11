@@ -1,21 +1,21 @@
-# pycounts
+# pycounts_thomassiu
 
 Calculate word counts in a text file
 
 ## Installation
 
 ```bash
-$ pip install pycounts
+$ pip install pycounts_thomassiu
 ```
 
 ## Usage
 
-`pycounts` can be used to count words in a text file and plot results
+`pycounts_thomassiu` can be used to count words in a text file and plot results
 as follows:
 
 ```python
-from pycounts.pycounts import count_words
-from pycounts.plotting import plot_words
+from pycounts_thomassiu.pycounts import count_words
+from pycounts_thomassiu.plotting import plot_words
 import matplotlib.pyplot as plt
 
 file_path = "test.txt"  # path to your file
@@ -30,8 +30,8 @@ Interested in contributing? Check out the contributing guidelines. Please note t
 
 ## License
 
-`pycounts` was created by Thomas Siu. It is licensed under the terms of the MIT license.
+`pycounts_thomassiu` was created by Thomas Siu. It is licensed under the terms of the MIT license.
 
 ## Credits
 
-`pycounts` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).
+`pycounts_thomassiu` was created with [`cookiecutter`](https://cookiecutter.readthedocs.io/en/latest/) and the `py-pkgs-cookiecutter` [template](https://github.com/py-pkgs/py-pkgs-cookiecutter).

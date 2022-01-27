@@ -86,6 +86,7 @@ jobs:
         poetry run semantic-release version
         poetry version
         git commit --amend -m "[skip actions] Bump new version"
+        git tag v$(poetry run semantic-release print-version)
 
         
     - name: Push package version changes

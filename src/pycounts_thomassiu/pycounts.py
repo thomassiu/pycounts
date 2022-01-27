@@ -1,5 +1,4 @@
 from collections import Counter
-from logging import raiseExceptions
 from string import punctuation
 
 
@@ -52,7 +51,7 @@ def clean_text(text):
 def count_words(input_file):
     """Count words in a text file.
 
-    Words are made lowercase and punctuation is removed 
+    Words are made lowercase and punctuation is removed
     before counting.
 
     Parameters
@@ -76,9 +75,6 @@ def count_words(input_file):
 
 
 def err():
-  #  try:
-  #      1/0
-  #  except:
     a = 1
-    if (a != 2):
-        raise(ValueError("You are great"))
+    if a != 2:
+        raise (ValueError("You are great"))

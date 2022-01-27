@@ -19,15 +19,21 @@ jobs:
     # Step 5. Install our package
     - name: Install package
       run: poetry install
-    # Step 6. Run tests for package
+    
+    ### New
+    # Step 6. Check style
+    - name: Check style
+      run: poetry run flake8 --exclude=docs* --max-line-length 120
+      
+    # Step 7. Run tests for package
     - name: Test with pytest
       run: poetry run pytest tests/ --cov=pycounts_thomassiu --cov-report=xml
-    # Step 7. Use Codecov to track coverage
+    # Step 8. Use Codecov to track coverage
     - uses: codecov/codecov-action@v2
       with:
         files: ./coverage.xml   # coverage report
         fail_ci_if_error: true  # terminate workflow if there's an error
-    # Step 8. Build documentation
+    # Step 9. Build documentation
     - name: Build documentation
       run: poetry run make html --directory docs/
   cd:
@@ -46,7 +52,16 @@ jobs:
     - uses: actions/checkout@v2
       with:
         fetch-depth: 0
-    # Step 4. Turn off branch protection
+    
+    ### new
+    # Step 4. Install poetry
+    - uses: snok/install-poetry@v1
+    # Step 5. Install our package
+    - name: Install package
+      run: poetry install     
+    ###  
+    
+    # Step 6. Turn off branch protection
     - name: Disable admin branch protection
       uses: benjefferies/branch-protection-bot@master
       if: always()
@@ -79,7 +94,7 @@ jobs:
     #      git config user.email github-actions@github.com
     #      semantic-release publish
     
-    # Step 6. Turn on branch protection
+    # Step 7. Turn on branch protection
     - name: Enable admin branch protection
       uses: benjefferies/branch-protection-bot@master
       if: always()  # Force to always run this step to ensure "include administrators" is always turned back on
@@ -87,21 +102,21 @@ jobs:
         access_token: ${{ secrets.ACCESS_TOKEN }}
         branch: main
         enforce_admins: true
-    # Step 7. Publish to TestPyPI
+    # Step 8. Publish to TestPyPI
     - uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__
         password: ${{ secrets.TEST_PYPI_API_TOKEN }}
         repository_url: https://test.pypi.org/legacy/
         skip_existing: true
-    # Step 8. Test install from TestPyPI
+    # Step 9. Test install from TestPyPI
     - name: Test install from TestPyPI
       run: |
           pip install \
           --index-url https://test.pypi.org/simple/ \
           --extra-index-url https://pypi.org/simple \
           pycounts_thomassiu
-    # Step 9. Publish to PyPI
+    # Step 10. Publish to PyPI
     - uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__

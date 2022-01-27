@@ -11,7 +11,7 @@ $ pip install pycounts_thomassiu
 ## Usage
 
 `pycounts_thomassiu` can be used to count words in a text file and plot results
-as follows:
+as follows :
 
 ```python
 from pycounts_thomassiu.pycounts import count_words

@@ -1,5 +1,7 @@
 from pycounts_thomassiu.pycounts import count_words
+from pycounts_thomassiu.pycounts import err
 from collections import Counter
+import pytest
 
 
 def test_count_words():
@@ -10,3 +12,10 @@ def test_count_words():
                         'different': 1, 'results': 1})
     actual = count_words("tests/einstein.txt")
     assert actual == expected, "Einstein quote counted incorrectly!"
+
+
+def test_err():
+
+    with pytest.raises(ValueError) as exc:
+        err()
+    assert "You are great" in str(exc.value)

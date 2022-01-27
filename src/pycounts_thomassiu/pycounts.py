@@ -1,4 +1,5 @@
 from collections import Counter
+from logging import raiseExceptions
 from string import punctuation
 
 
@@ -72,3 +73,12 @@ def count_words(input_file):
     text = clean_text(text)
     words = text.split()
     return Counter(words)
+
+
+def err():
+  #  try:
+  #      1/0
+  #  except:
+    a = 1
+    if (a != 2):
+        raise(ValueError("You are great"))

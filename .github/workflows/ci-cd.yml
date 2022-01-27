@@ -85,8 +85,8 @@ jobs:
         git pull origin main
         poetry run semantic-release version
         poetry version
-    #    git push
-        #git commit -m "[skip actions] Bump versions" -a
+        git commit --amend -m "[skip actions] Bump new version"
+
         
     - name: Push package version changes
       uses: ad-m/github-push-action@master

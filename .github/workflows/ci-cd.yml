@@ -51,7 +51,8 @@ jobs:
     # Step 3. Check-out repository so we can access its contents
     - uses: actions/checkout@v2
       with:
-        fetch-depth: 0
+        ref: main
+        token : ${{ secrets.ACCESS_TOKEN }}
     
     ### new
     # Step 4. Install poetry

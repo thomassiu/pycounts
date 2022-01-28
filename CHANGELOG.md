@@ -1,6 +1,10 @@
 # Changelog
 
 <!--next-version-placeholder-->
+## v0.3.5 (27/01/2022)
+
+- Updated github action
+
 
 ## v0.2.0 (13/01/2022)
 

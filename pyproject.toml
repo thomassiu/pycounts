@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pycounts_thomassiu"
-version = "2.0.0"
+version = "2.1.0"
 description = "Calculate word counts in a text file"
 authors = ["Thomas Siu"]
 license = "MIT"

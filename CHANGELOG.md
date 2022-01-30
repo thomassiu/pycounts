@@ -2,6 +2,9 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.2 (2022-01-30)
+
+
 ## v1.0.1 (2022-01-30)
 ### Documentation
 * Update readme ([`cd208d9`](https://github.com/thomassiu/pycounts/commit/cd208d96c5753f518e8f75ffea7d3464ed1923c2))

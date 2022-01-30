@@ -2,6 +2,15 @@
 
 <!--next-version-placeholder-->
 
+## v2.0.0 (2022-01-30)
+### Feature
+* Change readme ([`0b15ea3`](https://github.com/thomassiu/pycounts/commit/0b15ea30bc71bd86c8469533dc7b69f23b349f10))
+* Changes ([`d174e5b`](https://github.com/thomassiu/pycounts/commit/d174e5badaefdcc8c90bd690d1810ddf351a8c32))
+
+### Breaking
+* The graphiteWidth option has been removed. The default graphite width of 10mm is always used for performance reasons. ([`0b15ea3`](https://github.com/thomassiu/pycounts/commit/0b15ea30bc71bd86c8469533dc7b69f23b349f10))
+* change ([`d174e5b`](https://github.com/thomassiu/pycounts/commit/d174e5badaefdcc8c90bd690d1810ddf351a8c32))
+
 ## v1.0.2 (2022-01-30)
 
 
